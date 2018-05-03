@@ -7,13 +7,15 @@ app.use('/css',express.static(__dirname + '/css'));
 app.use('/js',express.static(__dirname + '/js'));
 app.use('/assets',express.static(__dirname + '/assets'));
 
+var game = require("./js/game.js");
+
 app.get('/',function(req,res){
     res.sendFile(__dirname+'/index.html');
 });
 
 server.lastPlayderID = 0;
 
-server.listen(process.env.PORT || 4000,function(){
+server.listen(process.env.PORT || 8081,function(){
     console.log('Listening on '+server.address().port);
 });
 
