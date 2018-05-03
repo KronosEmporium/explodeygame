@@ -9,25 +9,13 @@ Game.init = function(){
     Game.canvas = document.createElement('canvas');
     Game.canvas.height = 600;
     Game.canvas.width = 600;
-    document.body.appendChild(Game.canvas);
+    document.body..appendChild(Game.canvas);
 };
 
-document.body.appendChild(Game.canvas);
+Game.create = function(){
 
-// Game.create = function(){
-//     Game.playerMap = {};
-//     var testKey = game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
-//     testKey.onDown.add(Client.sendTest, this);
-//     var map = game.add.tilemap('map');
-//     map.addTilesetImage('tilesheet', 'tileset'); // tilesheet is the key of the tileset in map's JSON file
-//     var layer;
-//     for(var i = 0; i < map.layers.length; i++) {
-//         layer = map.createLayer(i);
-//     }
-//     layer.inputEnabled = true; // Allows clicking on the map ; it's enough to do it on the last layer
-//     layer.events.onInputUp.add(Game.getCoordinates, this);
-//     Client.askNewPlayer();
-// };
+    Client.askNewPlayer();
+};
 // 
 // Game.getCoordinates = function(layer,pointer){
 //     Client.sendClick(pointer.worldX,pointer.worldY);
