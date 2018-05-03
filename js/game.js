@@ -12,6 +12,8 @@ Game.init = function(){
     document.body.appendChild(Game.canvas);
 };
 
+document.body.appendChild(Game.canvas);
+
 // Game.create = function(){
 //     Game.playerMap = {};
 //     var testKey = game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
