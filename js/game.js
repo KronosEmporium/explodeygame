@@ -1,6 +1,6 @@
-var Game = {};
+function Game(){};
 
-Game.doWhatever = function(){
+Game.prototype.doWhatever = function(){
     Game.canvas = document.createElement('canvas');
     Game.canvas.height = 600;
     Game.canvas.width = 600;
