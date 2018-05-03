@@ -9,6 +9,7 @@ Game.init = function(){
     Game.canvas = document.createElement('canvas');
     Game.canvas.height = 600;
     Game.canvas.width = 600;
+    document.getElementById('game').appendChild(Game.canvas);
 };
 
 // Game.create = function(){
