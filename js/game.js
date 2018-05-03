@@ -1,16 +1,16 @@
 var Game = {};
 
 Game.init = function(){
-    
-};
-
-Game.create = function(){
-	Game.canvas = document.createElement('canvas');
+    Game.canvas = document.createElement('canvas');
     Game.canvas.height = 600;
     Game.canvas.width = 600;
-    document.body.appendChild(Game.canvas);
-    Client.askNewPlayer();
+    document.getElementById('myspace').appendChild(Game.canvas);
 };
+
+// Game.create = function(){
+// 
+//     Client.askNewPlayer();
+// };
 // 
 // Game.getCoordinates = function(layer,pointer){
 //     Client.sendClick(pointer.worldX,pointer.worldY);
