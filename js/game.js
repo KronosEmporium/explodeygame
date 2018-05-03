@@ -1,21 +1,16 @@
-var can = document.createElement("canvas");
-can.height = 600;
-can.width = 600;
-document.body.appendChild(can);
+var Game = {};
 
-// var Game = {};
-// 
-// Game.init = function(){
-//     Game.canvas = document.createElement('canvas');
-//     Game.canvas.height = 600;
-//     Game.canvas.width = 600;
-//     document.body.appendChild(Game.canvas);
-// };
-// 
-// Game.create = function(){
-// 
-//     Client.askNewPlayer();
-// };
+Game.init = function(){
+    
+};
+
+Game.create = function(){
+	Game.canvas = document.createElement('canvas');
+    Game.canvas.height = 600;
+    Game.canvas.width = 600;
+    document.body.appendChild(Game.canvas);
+    Client.askNewPlayer();
+};
 // 
 // Game.getCoordinates = function(layer,pointer){
 //     Client.sendClick(pointer.worldX,pointer.worldY);
