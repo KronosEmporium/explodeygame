@@ -6,13 +6,9 @@
 var Game = {};
 
 Game.init = function(){
-    game.stage.disableVisibilityChange = true;
-};
-
-Game.preload = function() {
-    game.load.tilemap('map', 'assets/map/example_map.json', null, Phaser.Tilemap.TILED_JSON);
-    game.load.spritesheet('tileset', 'assets/map/tilesheet.png',32,32);
-    game.load.image('sprite','assets/sprites/sprite.png');
+    game.canvas = document.createElement 'canvas'
+    game.canvas.height = 600
+    game.canvas.width = 600
 };
 
 Game.create = function(){
