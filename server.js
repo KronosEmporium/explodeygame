@@ -21,31 +21,37 @@ server.listen(process.env.PORT || 8081,function(){
 
 io.on('connection',function(socket){
 
-    socket.on('newplayer',function(){
-        socket.player = {
-            id: server.lastPlayderID++,
-            x: randomInt(100,400),
-            y: randomInt(100,400)
-        };
-        socket.emit('allplayers',getAllPlayers());
-        socket.broadcast.emit('newplayer',socket.player);
+	socket.on('doWhatever', onDoWhatever.bind(this.socket));
 
-        // socket.on('click',function(data){
-//             console.log('click to '+data.x+', '+data.y);
-//             socket.player.x = data.x;
-//             socket.player.y = data.y;
-//             io.emit('move',socket.player);
+    // socket.on('newplayer',function(){
+//         socket.player = {
+//             id: server.lastPlayderID++,
+//             x: randomInt(100,400),
+//             y: randomInt(100,400)
+//         };
+//         socket.emit('allplayers',getAllPlayers());
+//         socket.broadcast.emit('newplayer',socket.player);
+// 
+//         // socket.on('click',function(data){
+// //             console.log('click to '+data.x+', '+data.y);
+// //             socket.player.x = data.x;
+// //             socket.player.y = data.y;
+// //             io.emit('move',socket.player);
+// //         });
+// 
+//         socket.on('disconnect',function(){
+//             io.emit('remove',socket.player.id);
 //         });
-
-        socket.on('disconnect',function(){
-            io.emit('remove',socket.player.id);
-        });
-    });
-
-    socket.on('test',function(){
-        console.log('test received');
-    });
+//     });
+// 
+//     socket.on('test',function(){
+//         console.log('test received');
+//     });
 });
+
+function onDoWhatever() {
+	var result = game.doWhatever();
+}
 
 function getAllPlayers(){
     var players = [];
