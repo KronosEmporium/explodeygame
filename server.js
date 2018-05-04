@@ -9,7 +9,7 @@ app.use('/css',express.static(__dirname + '/css'));
 app.use('/js',express.static(__dirname + '/js'));
 app.use('/assets',express.static(__dirname + '/assets'));
 
-var game = require('/js/game.js');
+var game = require(__dirname + '/js/game');
 
 app.get('/', function(req, res){
 	res.sendFile(__dirname + '/index.html');
