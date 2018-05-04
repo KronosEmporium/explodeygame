@@ -10,7 +10,6 @@ app.get('/', function(req, res){
 
 io.on('connection', function(socket) {
 	console.log('a user connected');
-	game.init();
 });
 
 http.listen(process.env.PORT || 8081,function(){
