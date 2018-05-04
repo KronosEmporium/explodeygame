@@ -17,7 +17,7 @@ app.get('/', function(req, res){
 
 io.on('connection', function(socket) {
 	console.log('a user connected');
-	Game.init();
+	console.log(typeof Game.init);
 });
 
 server.listen(port,function(){
