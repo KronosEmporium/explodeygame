@@ -1,6 +1,6 @@
-function Game(){};
+var Game = {};
 
-Game.prototype.doWhatever = function(){
+Game.init = function(){
     Game.canvas = document.createElement('canvas');
     Game.canvas.height = 600;
     Game.canvas.width = 600;
@@ -11,7 +11,7 @@ Game.prototype.doWhatever = function(){
 // 
 //     Client.askNewPlayer();
 // };
-
+// 
 // Game.getCoordinates = function(layer,pointer){
 //     Client.sendClick(pointer.worldX,pointer.worldY);
 // };
