@@ -16,7 +16,9 @@ app.get('/', function(req, res){
 });
 
 io.on('connection', function(socket) {
-	console.log('a user connected');
+	socket.on('test',function(){
+		console.log('test received');
+	});
 });
 
 server.listen(port,function(){
