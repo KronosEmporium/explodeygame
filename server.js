@@ -2,7 +2,7 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
-var game = require('./js/game.js');
+var game = require('./js/game');
 
 app.get('/', function(req, res){
 	res.sendFile(__dirname + '/index.html');
