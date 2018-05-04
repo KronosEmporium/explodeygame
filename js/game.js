@@ -1,4 +1,4 @@
-Game.exports = {
+module.exports = {
 	init : function(){
     	Game.canvas = document.createElement('canvas');
     	Game.canvas.height = 600;
