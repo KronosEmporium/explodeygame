@@ -10,7 +10,7 @@ app.use('/assets',express.static(__dirname + '/assets'));
 var game = require("./js/game.js");
 
 app.get('/',function(req,res){
-    res.sendFile(__dirname+'/index.html');
+    res.send('<h1>Hello, world!</h1>');
 });
 
 server.lastPlayderID = 0;
