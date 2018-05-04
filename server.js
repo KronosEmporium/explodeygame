@@ -12,6 +12,6 @@ io.on('connection', function(socket) {
 	console.log('a user connected');
 });
 
-http.listen(port,function(){
+server.listen(port,function(){
 	console.log('listening');
 });
