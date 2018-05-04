@@ -13,7 +13,6 @@ var game = require(__dirname + '/js/game');
 
 app.get('/', function(req, res){
 	res.sendFile(__dirname + '/index.html');
-	game.init();
 });
 
 io.on('connection', function(socket) {
