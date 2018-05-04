@@ -13,11 +13,11 @@ var game = require(__dirname + '/js/game.js');
 
 app.get('/', function(req, res){
 	res.sendFile(__dirname + '/index.html');
-	console.log(game);
 });
 
 io.on('connection', function(socket) {
 	console.log('a user connected');
+	console.log(game);
 });
 
 server.listen(port,function(){
