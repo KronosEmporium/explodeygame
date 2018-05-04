@@ -26,10 +26,6 @@
     "Node.js",
     "socket.io"
   ],
-  "headers": {
-    "/**": {
-      "X-Content-Type-Options": "nosniff"
-  },
   "author": "Crosby Allison",
   "license": "MIT"
 }
